@@ -74,13 +74,28 @@ class UpdateActivity : AppCompatActivity() {
         tampilkanData()
 //        ambil nilai terbaru
         idre = intent.getIntExtra(ID,0)
-//        if (db.ambilNilai(idre)!=null){
         val nilairp = db.ambilNilai(idre).toDouble().let { MainActivity.rupiah(it) }
         total = nilairp.replace("Rp","")
-//        }else{
-//            total="0"
-//        }
+
+        val masuk = db.ambilNilaiTransaksi(idre, "Masuk")
+        val nilai_masuk = masuk.toDouble().let { MainActivity.rupiah(it) }
+        val total_masuk = "Rp. ${nilai_masuk.replace("Rp","")}"
+        val keluar = db.ambilNilaiTransaksi(intent.getIntExtra(ID,0), "Keluar")
+        val saldo = db.ambilNilaiSaldo(idre)
+//        val saldo_skrg = saldo.toDouble().let { MainActivity.rupiah(it) }
+//        val total_saldo_skrg = "Rp. ${saldo_skrg.replace("Rp","")}"
+//        Log.d("saldo", saldo)
+//        Log.d("masuk", saldo)
+//        Log.d("keluar", saldo)
+
+        val sisanya = ( (saldo.toInt()+masuk.toInt()) - keluar.toInt() )
+        val nilaisisarp = sisanya.toDouble().let { MainActivity.rupiah(it) }
+        val total_saldo_skrg ="Rp. ${nilaisisarp.replace("Rp","")}"
+
         id_total_reimbus.setText(total)
+        id_total_reimbus_masuk.setText(total_masuk)
+        id_total_reimbus_skrg.setText(total_saldo_skrg)
+
         super.onStart()
     }
 

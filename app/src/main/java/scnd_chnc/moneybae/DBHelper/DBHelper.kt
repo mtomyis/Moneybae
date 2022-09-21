@@ -283,5 +283,21 @@ class DBHelper(context:Context):SQLiteOpenHelper(context,DATABASE_NAME,null,DATA
         db.close()
         return totalnya
     }
+
+    fun ambilNilaiSaldo(idReimbus: Int): String {
+        var totalnya:String = "0"
+        val db = this.writableDatabase
+//        val ambiltotal = ("SELECT COALESCE(SUM($COL_NOMINAL_DETAIL),0) FROM $TABLE_DETAIL WHERE $COL_FK_REIMBURS = $idReimbus")
+        val ambiltotal = ("SELECT $COL_SALDO FROM $TABLE_REIMBURS WHERE $COL_ID_REIMBURS = $idReimbus")
+        val cursor = db.rawQuery(ambiltotal,null)
+//        if (cursor.moveToFirst())
+//        {
+        cursor.moveToFirst()
+        cursor.moveToPosition(0)
+        totalnya = cursor.getString(cursor.getColumnIndex(COL_SALDO))
+//        }
+        db.close()
+        return totalnya
+    }
     //buat ayang
 }

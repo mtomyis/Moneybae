@@ -157,7 +157,7 @@
                 <ImageView
                     android:layout_width="@dimen/_24ssp"
                     android:layout_height="@dimen/_24ssp"
-                    android:src="@drawable/ic_baseline_insert_drive_file_24"
+                    android:src="@drawable/ic_baseline_attach_money_in"
                     />
 
                 <TextView
@@ -166,7 +166,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/latoregular"
-                    android:text="Total Keluar :   Rp"/>
+                    android:text="Masuk :   Rp"/>
+                <TextView
+                    android:id="@+id/id_total_reimbus_masuk"
+                    android:layout_marginLeft="@dimen/_3ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="560.000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_24ssp"
+                    android:layout_height="@dimen/_24ssp"
+                    android:src="@drawable/ic_baseline_attach_money_out"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_8ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="Keluar :   Rp"/>
                 <TextView
                     android:id="@+id/id_total_reimbus"
                     android:layout_marginLeft="@dimen/_3ssp"
@@ -176,6 +203,34 @@
                     android:fontFamily="@font/latoregular"
                     android:text="560.000"/>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_24ssp"
+                    android:layout_height="@dimen/_24ssp"
+                    android:src="@drawable/ic_baseline_attach_money_skrg"
+                    />
+                <TextView
+                    android:layout_marginLeft="@dimen/_8ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="Saldo saat ini :   Rp"/>
+                <TextView
+                    android:id="@+id/id_total_reimbus_skrg"
+                    android:layout_marginLeft="@dimen/_3ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="560.000"/>
+            </LinearLayout>
+
+
 
         </LinearLayout>
     </ScrollView>

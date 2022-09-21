@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/drawable/ic_baseline_attach_money_skrg.xml" value="0.1615" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1295" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/drawable/ic_outline_notifications_none_24.xml" value="0.1295" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/layout/activity_addbiaya.xml" value="0.17391304347826086" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/layout/activity_create.xml" value="0.21" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/layout/activity_create.xml" value="0.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/layout/activity_moment.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/Moneybae/app/src/main/res/layout/item_claim.xml" value="0.17391304347826086" />
