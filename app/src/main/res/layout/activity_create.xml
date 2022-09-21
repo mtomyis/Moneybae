@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/_16ssp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateActivity">
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/latoregular"
+        android:text="Tanggal Mulai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="@dimen/_24ssp"
+        android:layout_height="@dimen/_24ssp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="@dimen/_8ssp"
+        android:src="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintEnd_toStartOf="@+id/ed_tgl_reimburs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_tgl_reimburs"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:inputType="datetime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/latoregular"
+        android:text="Nama Laporan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_tgl_reimburs" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="@dimen/_24ssp"
+        android:layout_height="@dimen/_24ssp"
+        android:layout_marginTop="@dimen/_35ssp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_insert_drive_file_24"
+        app:layout_constraintEnd_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <EditText
+        android:id="@+id/ed_nama_reimburse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/_5ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView15saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/latoregular"
+        android:text="Saldo Awal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_nama_reimburse" />
+
+    <ImageView
+        android:id="@+id/imageView11saldo"
+        android:layout_width="@dimen/_24ssp"
+        android:layout_height="@dimen/_24ssp"
+        android:layout_marginTop="@dimen/_35ssp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_insert_drive_file_24"
+        app:layout_constraintEnd_toStartOf="@+id/textView15saldo"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <EditText
+        android:id="@+id/ed_saldo"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/_5ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15saldo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="@dimen/_16ssp"
+        android:fontFamily="@font/latoregular"
+        android:text="List Biaya"
+        app:layout_constraintStart_toEndOf="@+id/idimglistbiaya"
+        app:layout_constraintTop_toBottomOf="@+id/ed_saldo" />
+
+    <ImageView
+        android:id="@+id/idimglistbiaya"
+        android:layout_width="@dimen/_24ssp"
+        android:layout_height="@dimen/_24ssp"
+        android:layout_marginTop="@dimen/_25ssp"
+        android:src="@drawable/ic_baseline_list_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11saldo" />
+
+    <Button
+        android:id="@+id/btn_tambahbiaya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3F51B5"
+        android:text="Tambah Biaya"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/scroll_list_biaya"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_saldo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll_list_biaya"
+        android:layout_marginTop="280dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list_biaya"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_8ssp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="@dimen/_24ssp"
+                    android:layout_height="@dimen/_24ssp"
+                    android:src="@drawable/ic_baseline_insert_drive_file_24"
+                    />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_8ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="Total Keluar :   Rp"/>
+                <TextView
+                    android:id="@+id/id_total_reimbus"
+                    android:layout_marginLeft="@dimen/_3ssp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latoregular"
+                    android:text="560.000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_simpan_reimburs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_16ssp"
+        android:backgroundTint="#3F51B5"
+        android:text="Simpan"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/scroll_list_biaya"
+        app:layout_constraintEnd_toEndOf="@+id/scroll_list_biaya" />
+    <Button
+        android:id="@+id/btn_edit_reimburs"
+        android:visibility="gone"
+        android:text="Perbarui"
+        android:backgroundTint="#3F51B5"
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/_16ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/scroll_list_biaya"
+        app:layout_constraintEnd_toEndOf="@+id/scroll_list_biaya"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
