@@ -58,6 +58,8 @@ import java.util.*
 
 class UpdateActivity : AppCompatActivity() {
 
+//    tes
+
     private val STORAGE_CODE: Int = 100
 
     internal lateinit var db: DBHelper
